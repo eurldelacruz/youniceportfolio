@@ -1741,7 +1741,30 @@ var projectData = {
     desc: 'A collection of short-form video content edited and produced for various campus campaigns and creative projects. From advocacy reels to event teasers, each crafted with intentional storytelling.',
     video: 'https://drive.google.com/drive/folders/1PHfYQKLsU6IdEtdUS-TMrERZDi7mznlq?usp=sharing',
     get cover() { return imgSrc('shortfilm'); }
-  }
+  },
+      <div class="proj-card reveal reveal-delay-1" onclick="openProject('presentations')">
+        <div class="proj-thumb">
+          <div class="slideshow" id="presSlideshow" style="height:100%;position:relative;">
+            <div class="slide active" style="position:absolute;inset:0;"><img data-imgsrc="slide_kirby" src="" alt="Importance of Meditation"/></div>
+            <div class="slide" style="position:absolute;inset:0;"><img data-imgsrc="slide_course" src="" alt="How to Create an Online Course"/></div>
+            <button class="slide-prev" onclick="event.stopPropagation();slidePrev('presSlideshow',2)">&#8249;</button>
+            <button class="slide-next" onclick="event.stopPropagation();slideNext('presSlideshow',2)">&#8250;</button>
+            <div class="slide-dots">
+              <button class="slide-dot active" onclick="event.stopPropagation();goSlide('presSlideshow',2,0)"></button>
+              <button class="slide-dot" onclick="event.stopPropagation();goSlide('presSlideshow',2,1)"></button>
+            </div>
+          </div>
+          <div class="proj-thumb-overlay">
+            <div class="proj-thumb-cta">View Presentations</div>
+          </div>
+        </div>
+        <div class="proj-body">
+          <div class="proj-cat">Presentation Design</div>
+          <div class="proj-title">Presentation Design</div>
+          <p class="proj-desc">Creative &amp; professional slide decks — from a Kirby-themed meditation deck to a clean professional course presentation.</p>
+          <span class="proj-link">View Project <span class="proj-link-arrow">→</span></span>
+        </div>
+      </div>
 };
 
 // ── CUSTOM CURSOR ──
